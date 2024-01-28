@@ -7,5 +7,5 @@
 
 ## Running
 
-`nvm use`
-`npm start`
+* `nvm use`
+* `npm start`
