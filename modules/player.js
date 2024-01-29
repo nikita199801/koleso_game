@@ -46,7 +46,7 @@ class Player {
             clearTimeout(allowedTimeoutId);
         }, options.randomTimeout);
 
-        allowedTimeoutId = getAllowedTimeout(options.maxTimeout, userTimeoutEmulationId);
+        allowedTimeoutId = getAllowedTimeout.call(this, options.maxTimeout, userTimeoutEmulationId);
     }
 
     passBet(board, options) {
@@ -72,7 +72,7 @@ class Player {
 
         }, options.randomTimeout);
 
-        allowedTimeoutId = getAllowedTimeout(options.maxTimeout, userTimeoutEmulationId);
+        allowedTimeoutId = getAllowedTimeout.call(this, options.maxTimeout, userTimeoutEmulationId);
     }
 
     updateBalance(amount) {
